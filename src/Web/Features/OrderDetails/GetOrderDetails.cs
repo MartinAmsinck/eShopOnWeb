@@ -1,7 +1,7 @@
 ﻿using MediatR;
-using Microsoft.eShopWeb.Web.ViewModels;
+using Effektiv.Web.ViewModels;
 
-namespace Microsoft.eShopWeb.Web.Features.OrderDetails
+namespace Effektiv.Web.Features.OrderDetails
 {
     public class GetOrderDetails : IRequest<OrderViewModel>
     {

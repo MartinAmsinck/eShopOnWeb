@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Microsoft.eShopWeb.Web.Extensions
+namespace Effektiv.Web.Extensions
 {
     public static class CacheHelpers
     {

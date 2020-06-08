@@ -1,11 +1,11 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc.Rendering;
-using Microsoft.eShopWeb.Web.ViewModels;
+using Effektiv.Web.ViewModels;
 using Microsoft.Extensions.Caching.Memory;
-using Microsoft.eShopWeb.Web.Extensions;
+using Effektiv.Web.Extensions;
 
-namespace Microsoft.eShopWeb.Web.Services
+namespace Effektiv.Web.Services
 {
     public class CachedCatalogViewModelService : ICatalogViewModelService
     {

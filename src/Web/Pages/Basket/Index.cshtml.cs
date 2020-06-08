@@ -2,15 +2,15 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using Microsoft.eShopWeb.ApplicationCore.Interfaces;
-using Microsoft.eShopWeb.Infrastructure.Identity;
-using Microsoft.eShopWeb.Web.Interfaces;
-using Microsoft.eShopWeb.Web.ViewModels;
+using Effektiv.ApplicationCore.Interfaces;
+using Effektiv.Infrastructure.Identity;
+using Effektiv.Web.Interfaces;
+using Effektiv.Web.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace Microsoft.eShopWeb.Web.Pages.Basket
+namespace Effektiv.Web.Pages.Basket
 {
     public class IndexModel : PageModel
     {

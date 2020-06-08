@@ -1,6 +1,6 @@
-﻿using Microsoft.eShopWeb.ApplicationCore.Entities.BasketAggregate;
+﻿using Effektiv.ApplicationCore.Entities.BasketAggregate;
 
-namespace Microsoft.eShopWeb.ApplicationCore.Specifications
+namespace Effektiv.ApplicationCore.Specifications
 {
     public sealed class BasketWithItemsSpecification : BaseSpecification<Basket>
     {

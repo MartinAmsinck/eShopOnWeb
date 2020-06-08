@@ -1,4 +1,4 @@
-﻿namespace Microsoft.eShopWeb.ApplicationCore.Constants
+﻿namespace Effektiv.ApplicationCore.Constants
 {
     public class AuthorizationConstants
     {

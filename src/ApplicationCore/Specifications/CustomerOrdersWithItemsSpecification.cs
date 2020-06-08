@@ -1,7 +1,7 @@
-﻿using Microsoft.eShopWeb.ApplicationCore.Entities.OrderAggregate;
-using Microsoft.eShopWeb.ApplicationCore.Helpers.Query;
+﻿using Effektiv.ApplicationCore.Entities.OrderAggregate;
+using Effektiv.ApplicationCore.Helpers.Query;
 
-namespace Microsoft.eShopWeb.ApplicationCore.Specifications
+namespace Effektiv.ApplicationCore.Specifications
 {
     public class CustomerOrdersWithItemsSpecification : BaseSpecification<Order>
     {

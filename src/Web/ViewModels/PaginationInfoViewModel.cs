@@ -1,4 +1,4 @@
-﻿namespace Microsoft.eShopWeb.Web.ViewModels
+﻿namespace Effektiv.Web.ViewModels
 {
     public class PaginationInfoViewModel
     {

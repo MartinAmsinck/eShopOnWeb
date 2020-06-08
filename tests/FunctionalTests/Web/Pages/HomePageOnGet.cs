@@ -1,9 +1,9 @@
-﻿using Microsoft.eShopWeb.FunctionalTests.Web;
+﻿using Effektiv.FunctionalTests.Web;
 using System.Net.Http;
 using System.Threading.Tasks;
 using Xunit;
 
-namespace Microsoft.eShopWeb.FunctionalTests.WebRazorPages
+namespace Effektiv.FunctionalTests.WebRazorPages
 {
     [Collection("Sequential")]
     public class HomePageOnGet : IClassFixture<WebTestFixture>

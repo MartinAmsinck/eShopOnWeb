@@ -1,5 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc.Testing;
-using Microsoft.eShopWeb.FunctionalTests.Web;
+using Effektiv.FunctionalTests.Web;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http;
@@ -7,7 +7,7 @@ using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using Xunit;
 
-namespace Microsoft.eShopWeb.FunctionalTests.WebRazorPages
+namespace Effektiv.FunctionalTests.WebRazorPages
 {
     [Collection("Sequential")]
     public class BasketPageCheckout : IClassFixture<WebTestFixture>

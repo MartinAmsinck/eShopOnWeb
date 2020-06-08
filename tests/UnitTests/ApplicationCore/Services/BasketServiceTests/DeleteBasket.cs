@@ -1,11 +1,11 @@
-﻿using Microsoft.eShopWeb.ApplicationCore.Entities.BasketAggregate;
-using Microsoft.eShopWeb.ApplicationCore.Interfaces;
-using Microsoft.eShopWeb.ApplicationCore.Services;
+﻿using Effektiv.ApplicationCore.Entities.BasketAggregate;
+using Effektiv.ApplicationCore.Interfaces;
+using Effektiv.ApplicationCore.Services;
 using Moq;
 using System.Threading.Tasks;
 using Xunit;
 
-namespace Microsoft.eShopWeb.UnitTests.ApplicationCore.Services.BasketServiceTests
+namespace Effektiv.UnitTests.ApplicationCore.Services.BasketServiceTests
 {
     public class DeleteBasket
     {

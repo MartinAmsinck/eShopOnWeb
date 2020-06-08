@@ -2,7 +2,7 @@
 using System.Threading.Tasks;
 using Xunit;
 
-namespace Microsoft.eShopWeb.FunctionalTests.Web.Controllers
+namespace Effektiv.FunctionalTests.Web.Controllers
 {
     [Collection("Sequential")]
     public class CatalogControllerIndex : IClassFixture<WebTestFixture>

@@ -7,14 +7,14 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc.ApplicationModels;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.eShopWeb.ApplicationCore.Interfaces;
-using Microsoft.eShopWeb.ApplicationCore.Services;
-using Microsoft.eShopWeb.Infrastructure.Data;
-using Microsoft.eShopWeb.Infrastructure.Identity;
-using Microsoft.eShopWeb.Infrastructure.Logging;
-using Microsoft.eShopWeb.Infrastructure.Services;
-using Microsoft.eShopWeb.Web.Interfaces;
-using Microsoft.eShopWeb.Web.Services;
+using Effektiv.ApplicationCore.Interfaces;
+using Effektiv.ApplicationCore.Services;
+using Effektiv.Infrastructure.Data;
+using Effektiv.Infrastructure.Identity;
+using Effektiv.Infrastructure.Logging;
+using Effektiv.Infrastructure.Services;
+using Effektiv.Web.Interfaces;
+using Effektiv.Web.Services;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Diagnostics.HealthChecks;
@@ -25,7 +25,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Net.Mime;
 
-namespace Microsoft.eShopWeb.Web
+namespace Effektiv.Web
 {
     public class Startup
     {
@@ -129,7 +129,7 @@ namespace Microsoft.eShopWeb.Web
 
             services.AddHttpContextAccessor();
 
-            services.AddSwaggerGen(c => c.SwaggerDoc("v1", new OpenApi.Models.OpenApiInfo { Title = "My API", Version = "v1" }));
+            services.AddSwaggerGen(c => c.SwaggerDoc("v1", new Microsoft.OpenApi.Models.OpenApiInfo { Title = "My API", Version = "v1" }));
 
             services.AddHealthChecks();
 

@@ -1,7 +1,7 @@
 ﻿using Ardalis.GuardClauses;
-using Microsoft.eShopWeb.ApplicationCore.Interfaces;
+using Effektiv.ApplicationCore.Interfaces;
 
-namespace Microsoft.eShopWeb.ApplicationCore.Entities
+namespace Effektiv.ApplicationCore.Entities
 {
     public class CatalogItem : BaseEntity, IAggregateRoot
     {

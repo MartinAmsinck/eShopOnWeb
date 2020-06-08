@@ -1,6 +1,6 @@
-﻿using Microsoft.eShopWeb.ApplicationCore.Interfaces;
+﻿using Effektiv.ApplicationCore.Interfaces;
 
-namespace Microsoft.eShopWeb.ApplicationCore.Services
+namespace Effektiv.ApplicationCore.Services
 {
     public class UriComposer : IUriComposer
     {

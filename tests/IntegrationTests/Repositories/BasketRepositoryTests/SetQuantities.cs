@@ -2,14 +2,14 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.eShopWeb.ApplicationCore.Entities.BasketAggregate;
-using Microsoft.eShopWeb.ApplicationCore.Interfaces;
-using Microsoft.eShopWeb.ApplicationCore.Services;
-using Microsoft.eShopWeb.Infrastructure.Data;
-using Microsoft.eShopWeb.UnitTests.Builders;
+using Effektiv.ApplicationCore.Entities.BasketAggregate;
+using Effektiv.ApplicationCore.Interfaces;
+using Effektiv.ApplicationCore.Services;
+using Effektiv.Infrastructure.Data;
+using Effektiv.UnitTests.Builders;
 using Xunit;
 
-namespace Microsoft.eShopWeb.IntegrationTests.Repositories.BasketRepositoryTests
+namespace Effektiv.IntegrationTests.Repositories.BasketRepositoryTests
 {
     public class SetQuantities
     {

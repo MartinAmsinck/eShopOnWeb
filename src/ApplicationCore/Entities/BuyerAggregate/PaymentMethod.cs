@@ -1,4 +1,4 @@
-﻿namespace Microsoft.eShopWeb.ApplicationCore.Entities.BuyerAggregate
+﻿namespace Effektiv.ApplicationCore.Entities.BuyerAggregate
 {
     public class PaymentMethod : BaseEntity
     {

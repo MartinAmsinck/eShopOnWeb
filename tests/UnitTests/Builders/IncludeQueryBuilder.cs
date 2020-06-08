@@ -1,10 +1,10 @@
-﻿using Microsoft.eShopWeb.ApplicationCore.Helpers.Query;
-using Microsoft.eShopWeb.ApplicationCore.Interfaces;
-using Microsoft.eShopWeb.UnitTests.ApplicationCore.Helpers.Query;
+﻿using Effektiv.ApplicationCore.Helpers.Query;
+using Effektiv.ApplicationCore.Interfaces;
+using Effektiv.UnitTests.ApplicationCore.Helpers.Query;
 using System;
 using System.Collections.Generic;
 
-namespace Microsoft.eShopWeb.UnitTests.Builders
+namespace Effektiv.UnitTests.Builders
 {
     public class IncludeQueryBuilder
     {

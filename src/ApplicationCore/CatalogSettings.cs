@@ -1,4 +1,4 @@
-﻿namespace Microsoft.eShopWeb
+﻿namespace Effektiv
 {
     public class CatalogSettings
     {

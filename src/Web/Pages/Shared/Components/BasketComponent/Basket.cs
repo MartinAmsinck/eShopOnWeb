@@ -1,13 +1,13 @@
 ﻿using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.eShopWeb.Infrastructure.Identity;
-using Microsoft.eShopWeb.Web.Interfaces;
-using Microsoft.eShopWeb.Web.Pages.Basket;
-using Microsoft.eShopWeb.Web.ViewModels;
+using Effektiv.Infrastructure.Identity;
+using Effektiv.Web.Interfaces;
+using Effektiv.Web.Pages.Basket;
+using Effektiv.Web.ViewModels;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Microsoft.eShopWeb.Web.Pages.Shared.Components.BasketComponent
+namespace Effektiv.Web.Pages.Shared.Components.BasketComponent
 {
     public class Basket : ViewComponent
     {

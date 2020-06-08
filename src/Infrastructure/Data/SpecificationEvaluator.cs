@@ -1,9 +1,9 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using Microsoft.eShopWeb.ApplicationCore.Entities;
-using Microsoft.eShopWeb.ApplicationCore.Interfaces;
+using Effektiv.ApplicationCore.Entities;
+using Effektiv.ApplicationCore.Interfaces;
 using System.Linq;
 
-namespace Microsoft.eShopWeb.Infrastructure.Data
+namespace Effektiv.Infrastructure.Data
 {
     public class SpecificationEvaluator<T> where T : BaseEntity
     {

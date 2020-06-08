@@ -2,17 +2,17 @@
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.eShopWeb.ApplicationCore.Interfaces;
-using Microsoft.eShopWeb.Infrastructure.Identity;
-using Microsoft.eShopWeb.Web.Services;
-using Microsoft.eShopWeb.Web.ViewModels.Manage;
+using Effektiv.ApplicationCore.Interfaces;
+using Effektiv.Infrastructure.Identity;
+using Effektiv.Web.Services;
+using Effektiv.Web.ViewModels.Manage;
 using System;
 using System.Linq;
 using System.Text;
 using System.Text.Encodings.Web;
 using System.Threading.Tasks;
 
-namespace Microsoft.eShopWeb.Web.Controllers
+namespace Effektiv.Web.Controllers
 {
     [ApiExplorerSettings(IgnoreApi = true)]
     [Authorize] // Controllers that mainly require Authorization still use Controller/View; other pages use Pages

@@ -1,13 +1,13 @@
-﻿using Microsoft.eShopWeb.ApplicationCore.Entities.OrderAggregate;
-using Microsoft.eShopWeb.ApplicationCore.Interfaces;
-using Microsoft.eShopWeb.Web.Features.OrderDetails;
+﻿using Effektiv.ApplicationCore.Entities.OrderAggregate;
+using Effektiv.ApplicationCore.Interfaces;
+using Effektiv.Web.Features.OrderDetails;
 using Moq;
 using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
 using Xunit;
 
-namespace Microsoft.eShopWeb.UnitTests.MediatorHandlers.OrdersTests
+namespace Effektiv.UnitTests.MediatorHandlers.OrdersTests
 {
     public class GetOrderDetails_Should
     {

@@ -1,12 +1,12 @@
-﻿using Microsoft.eShopWeb.Infrastructure.Data;
+﻿using Effektiv.Infrastructure.Data;
 using Microsoft.EntityFrameworkCore;
 using System.Linq;
-using Microsoft.eShopWeb.UnitTests.Builders;
+using Effektiv.UnitTests.Builders;
 using Xunit;
 using Xunit.Abstractions;
 using System.Threading.Tasks;
 
-namespace Microsoft.eShopWeb.IntegrationTests.Repositories.OrderRepositoryTests
+namespace Effektiv.IntegrationTests.Repositories.OrderRepositoryTests
 {
     public class GetById
     {

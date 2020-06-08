@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Microsoft.eShopWeb.UnitTests.ApplicationCore.Helpers.Query
+namespace Effektiv.UnitTests.ApplicationCore.Helpers.Query
 {
     public class Book
     {

@@ -1,9 +1,9 @@
-﻿using Microsoft.eShopWeb.ApplicationCore.Interfaces;
+﻿using Effektiv.ApplicationCore.Interfaces;
 using Ardalis.GuardClauses;
 using System;
 using System.Collections.Generic;
 
-namespace Microsoft.eShopWeb.ApplicationCore.Entities.OrderAggregate
+namespace Effektiv.ApplicationCore.Entities.OrderAggregate
 {
     public class Order : BaseEntity, IAggregateRoot
     {

@@ -1,13 +1,13 @@
 ﻿using Ardalis.GuardClauses;
-using Microsoft.eShopWeb.ApplicationCore.Entities;
-using Microsoft.eShopWeb.ApplicationCore.Entities.BasketAggregate;
-using Microsoft.eShopWeb.ApplicationCore.Entities.OrderAggregate;
-using Microsoft.eShopWeb.ApplicationCore.Interfaces;
-using Microsoft.eShopWeb.ApplicationCore.Specifications;
+using Effektiv.ApplicationCore.Entities;
+using Effektiv.ApplicationCore.Entities.BasketAggregate;
+using Effektiv.ApplicationCore.Entities.OrderAggregate;
+using Effektiv.ApplicationCore.Interfaces;
+using Effektiv.ApplicationCore.Specifications;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Microsoft.eShopWeb.ApplicationCore.Services
+namespace Effektiv.ApplicationCore.Services
 {
     public class OrderService : IOrderService
     {

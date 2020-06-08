@@ -1,10 +1,10 @@
-﻿using Microsoft.eShopWeb.ApplicationCore.Helpers.Query;
+﻿using Effektiv.ApplicationCore.Helpers.Query;
 using System;
 using System.Collections.Generic;
 using System.Linq.Expressions;
 using Xunit;
 
-namespace Microsoft.eShopWeb.UnitTests.ApplicationCore.Helpers.Query.IncludeVisitorTests
+namespace Effektiv.UnitTests.ApplicationCore.Helpers.Query.IncludeVisitorTests
 {
     public class Visit
     {

@@ -1,7 +1,7 @@
-﻿using Microsoft.eShopWeb.ApplicationCore.Helpers.Query;
+﻿using Effektiv.ApplicationCore.Helpers.Query;
 using System.Collections.Generic;
 
-namespace Microsoft.eShopWeb.ApplicationCore.Interfaces
+namespace Effektiv.ApplicationCore.Interfaces
 {
     public interface IIncludeQuery
     {

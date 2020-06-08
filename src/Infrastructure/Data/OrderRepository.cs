@@ -1,9 +1,9 @@
-﻿using Microsoft.eShopWeb.ApplicationCore.Entities.OrderAggregate;
-using Microsoft.eShopWeb.ApplicationCore.Interfaces;
+﻿using Effektiv.ApplicationCore.Entities.OrderAggregate;
+using Effektiv.ApplicationCore.Interfaces;
 using Microsoft.EntityFrameworkCore;
 using System.Threading.Tasks;
 
-namespace Microsoft.eShopWeb.Infrastructure.Data
+namespace Effektiv.Infrastructure.Data
 {
     public class OrderRepository : EfRepository<Order>, IOrderRepository
     {

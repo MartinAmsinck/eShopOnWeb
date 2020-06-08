@@ -1,10 +1,10 @@
-﻿using Microsoft.eShopWeb.ApplicationCore.Entities;
-using Microsoft.eShopWeb.ApplicationCore.Interfaces;
-using Microsoft.eShopWeb.Web.Interfaces;
-using Microsoft.eShopWeb.Web.ViewModels;
+﻿using Effektiv.ApplicationCore.Entities;
+using Effektiv.ApplicationCore.Interfaces;
+using Effektiv.Web.Interfaces;
+using Effektiv.Web.ViewModels;
 using System.Threading.Tasks;
 
-namespace Microsoft.eShopWeb.Web.Services
+namespace Effektiv.Web.Services
 {
     public class CatalogItemViewModelService : ICatalogItemViewModelService
     {

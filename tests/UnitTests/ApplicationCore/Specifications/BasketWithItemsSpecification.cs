@@ -1,11 +1,11 @@
-﻿using Microsoft.eShopWeb.ApplicationCore.Specifications;
-using Microsoft.eShopWeb.ApplicationCore.Entities.BasketAggregate;
+﻿using Effektiv.ApplicationCore.Specifications;
+using Effektiv.ApplicationCore.Entities.BasketAggregate;
 using System.Collections.Generic;
 using System.Linq;
 using Xunit;
 using Moq;
 
-namespace Microsoft.eShopWeb.UnitTests
+namespace Effektiv.UnitTests
 {
     public class BasketWithItems
     {

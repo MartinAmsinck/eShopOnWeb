@@ -1,12 +1,12 @@
 ﻿using MediatR;
-using Microsoft.eShopWeb.ApplicationCore.Interfaces;
-using Microsoft.eShopWeb.ApplicationCore.Specifications;
-using Microsoft.eShopWeb.Web.ViewModels;
+using Effektiv.ApplicationCore.Interfaces;
+using Effektiv.ApplicationCore.Specifications;
+using Effektiv.Web.ViewModels;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace Microsoft.eShopWeb.Web.Features.OrderDetails
+namespace Effektiv.Web.Features.OrderDetails
 {
     public class GetOrderDetailsHandler : IRequestHandler<GetOrderDetails, OrderViewModel>
     {

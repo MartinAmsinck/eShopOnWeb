@@ -1,6 +1,6 @@
-﻿using Microsoft.eShopWeb.ApplicationCore.Entities.OrderAggregate;
+﻿using Effektiv.ApplicationCore.Entities.OrderAggregate;
 
-namespace Microsoft.eShopWeb.UnitTests.Builders
+namespace Effektiv.UnitTests.Builders
 {
     public class AddressBuilder
     {

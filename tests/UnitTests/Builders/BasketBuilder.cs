@@ -1,7 +1,7 @@
-﻿using Microsoft.eShopWeb.ApplicationCore.Entities.BasketAggregate;
+﻿using Effektiv.ApplicationCore.Entities.BasketAggregate;
 using Moq;
 
-namespace Microsoft.eShopWeb.UnitTests.Builders
+namespace Effektiv.UnitTests.Builders
 {
     public class BasketBuilder
     {

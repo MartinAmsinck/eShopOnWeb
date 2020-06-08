@@ -1,9 +1,9 @@
-﻿using Microsoft.eShopWeb.ApplicationCore.Entities.OrderAggregate;
+﻿using Effektiv.ApplicationCore.Entities.OrderAggregate;
 using System.Collections.Generic;
-using Microsoft.eShopWeb.UnitTests.Builders;
+using Effektiv.UnitTests.Builders;
 using Xunit;
 
-namespace Microsoft.eShopWeb.UnitTests.ApplicationCore.Entities.OrderTests
+namespace Effektiv.UnitTests.ApplicationCore.Entities.OrderTests
 {
     public class OrderTotal
     {

@@ -1,15 +1,15 @@
 ﻿using Microsoft.AspNetCore.Mvc.Rendering;
-using Microsoft.eShopWeb.ApplicationCore.Entities;
-using Microsoft.eShopWeb.ApplicationCore.Interfaces;
-using Microsoft.eShopWeb.ApplicationCore.Specifications;
-using Microsoft.eShopWeb.Web.ViewModels;
+using Effektiv.ApplicationCore.Entities;
+using Effektiv.ApplicationCore.Interfaces;
+using Effektiv.ApplicationCore.Specifications;
+using Effektiv.Web.ViewModels;
 using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Microsoft.eShopWeb.Web.Services
+namespace Effektiv.Web.Services
 {
     /// <summary>
     /// This is a UI-specific service so belongs in UI project. It does not contain any business logic and works

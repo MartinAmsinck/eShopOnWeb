@@ -1,5 +1,5 @@
-﻿using Microsoft.eShopWeb.ApplicationCore.Exceptions;
-using Microsoft.eShopWeb.ApplicationCore.Entities.BasketAggregate;
+﻿using Effektiv.ApplicationCore.Exceptions;
+using Effektiv.ApplicationCore.Entities.BasketAggregate;
 
 namespace Ardalis.GuardClauses
 {

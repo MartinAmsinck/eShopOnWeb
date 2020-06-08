@@ -1,8 +1,8 @@
-﻿using Microsoft.eShopWeb.ApplicationCore.Interfaces;
+﻿using Effektiv.ApplicationCore.Interfaces;
 using Ardalis.GuardClauses;
 using System.Collections.Generic;
 
-namespace Microsoft.eShopWeb.ApplicationCore.Entities.BuyerAggregate
+namespace Effektiv.ApplicationCore.Entities.BuyerAggregate
 {
     public class Buyer : BaseEntity, IAggregateRoot
     {

@@ -1,14 +1,14 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using Microsoft.eShopWeb.ApplicationCore.Entities.OrderAggregate;
-using Microsoft.eShopWeb.Infrastructure.Data;
-using Microsoft.eShopWeb.UnitTests.Builders;
+using Effektiv.ApplicationCore.Entities.OrderAggregate;
+using Effektiv.Infrastructure.Data;
+using Effektiv.UnitTests.Builders;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Xunit;
 using Xunit.Abstractions;
 
-namespace Microsoft.eShopWeb.IntegrationTests.Repositories.OrderRepositoryTests
+namespace Effektiv.IntegrationTests.Repositories.OrderRepositoryTests
 {
     public class GetByIdWithItemsAsync_Should
     {

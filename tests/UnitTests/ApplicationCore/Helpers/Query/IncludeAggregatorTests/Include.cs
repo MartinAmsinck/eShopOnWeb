@@ -1,7 +1,7 @@
-﻿using Microsoft.eShopWeb.ApplicationCore.Helpers.Query;
+﻿using Effektiv.ApplicationCore.Helpers.Query;
 using Xunit;
 
-namespace Microsoft.eShopWeb.UnitTests.ApplicationCore.Helpers.Query.IncludeAggregatorTests
+namespace Effektiv.UnitTests.ApplicationCore.Helpers.Query.IncludeAggregatorTests
 {
     public class Include
     {

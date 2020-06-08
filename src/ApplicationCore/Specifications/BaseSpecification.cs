@@ -1,10 +1,10 @@
-﻿using Microsoft.eShopWeb.ApplicationCore.Interfaces;
+﻿using Effektiv.ApplicationCore.Interfaces;
 using System;
 using System.Linq.Expressions;
 using System.Collections.Generic;
-using Microsoft.eShopWeb.ApplicationCore.Helpers.Query;
+using Effektiv.ApplicationCore.Helpers.Query;
 
-namespace Microsoft.eShopWeb.ApplicationCore.Specifications
+namespace Effektiv.ApplicationCore.Specifications
 {
     public abstract class BaseSpecification<T> : ISpecification<T>
     {

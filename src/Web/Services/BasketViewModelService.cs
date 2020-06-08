@@ -1,14 +1,14 @@
-﻿using Microsoft.eShopWeb.ApplicationCore.Entities;
-using Microsoft.eShopWeb.ApplicationCore.Entities.BasketAggregate;
-using Microsoft.eShopWeb.ApplicationCore.Interfaces;
-using Microsoft.eShopWeb.ApplicationCore.Specifications;
-using Microsoft.eShopWeb.Web.Interfaces;
-using Microsoft.eShopWeb.Web.Pages.Basket;
+﻿using Effektiv.ApplicationCore.Entities;
+using Effektiv.ApplicationCore.Entities.BasketAggregate;
+using Effektiv.ApplicationCore.Interfaces;
+using Effektiv.ApplicationCore.Specifications;
+using Effektiv.Web.Interfaces;
+using Effektiv.Web.Pages.Basket;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Microsoft.eShopWeb.Web.Services
+namespace Effektiv.Web.Services
 {
     public class BasketViewModelService : IBasketViewModelService
     {

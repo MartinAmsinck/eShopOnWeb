@@ -1,7 +1,7 @@
-﻿using Microsoft.eShopWeb.Web.Pages.Basket;
+﻿using Effektiv.Web.Pages.Basket;
 using System.Threading.Tasks;
 
-namespace Microsoft.eShopWeb.Web.Interfaces
+namespace Effektiv.Web.Interfaces
 {
     public interface IBasketViewModelService
     {

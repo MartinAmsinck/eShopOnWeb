@@ -1,8 +1,8 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using Microsoft.eShopWeb.ApplicationCore.Entities.BasketAggregate;
+using Effektiv.ApplicationCore.Entities.BasketAggregate;
 
-namespace Microsoft.eShopWeb.Infrastructure.Data.Config
+namespace Effektiv.Infrastructure.Data.Config
 {
     public class BasketConfiguration : IEntityTypeConfiguration<Basket>
     {

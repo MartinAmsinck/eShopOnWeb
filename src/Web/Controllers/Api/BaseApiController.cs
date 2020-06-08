@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 
-namespace Microsoft.eShopWeb.Web.Controllers.Api
+namespace Effektiv.Web.Controllers.Api
 {
     [Route("api/[controller]/[action]")]
     [ApiController]

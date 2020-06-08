@@ -1,6 +1,6 @@
 ﻿using System.Linq.Expressions;
 
-namespace Microsoft.eShopWeb.ApplicationCore.Helpers.Query
+namespace Effektiv.ApplicationCore.Helpers.Query
 {
     public class IncludeVisitor : ExpressionVisitor
     {

@@ -1,8 +1,8 @@
-﻿using Microsoft.eShopWeb.ApplicationCore.Interfaces;
+﻿using Effektiv.ApplicationCore.Interfaces;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace Microsoft.eShopWeb.ApplicationCore.Entities.BasketAggregate
+namespace Effektiv.ApplicationCore.Entities.BasketAggregate
 {
     public class Basket : BaseEntity, IAggregateRoot
     {

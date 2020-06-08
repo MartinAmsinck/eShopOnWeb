@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace Microsoft.eShopWeb.ApplicationCore.Interfaces
+namespace Effektiv.ApplicationCore.Interfaces
 {
     public interface IBasketService
     {

@@ -1,6 +1,6 @@
-﻿using Microsoft.eShopWeb.ApplicationCore.Entities;
+﻿using Effektiv.ApplicationCore.Entities;
 
-namespace Microsoft.eShopWeb.ApplicationCore.Specifications
+namespace Effektiv.ApplicationCore.Specifications
 {
     public class CatalogFilterPaginatedSpecification : BaseSpecification<CatalogItem>
     {

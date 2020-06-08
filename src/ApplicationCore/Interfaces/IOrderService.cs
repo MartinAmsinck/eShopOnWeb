@@ -1,7 +1,7 @@
-﻿using Microsoft.eShopWeb.ApplicationCore.Entities.OrderAggregate;
+﻿using Effektiv.ApplicationCore.Entities.OrderAggregate;
 using System.Threading.Tasks;
 
-namespace Microsoft.eShopWeb.ApplicationCore.Interfaces
+namespace Effektiv.ApplicationCore.Interfaces
 {
     public interface IOrderService
     {

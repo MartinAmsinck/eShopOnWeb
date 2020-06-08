@@ -1,8 +1,8 @@
 ﻿using MediatR;
-using Microsoft.eShopWeb.Web.ViewModels;
+using Effektiv.Web.ViewModels;
 using System.Collections.Generic;
 
-namespace Microsoft.eShopWeb.Web.Features.MyOrders
+namespace Effektiv.Web.Features.MyOrders
 {
     public class GetMyOrders : IRequest<IEnumerable<OrderViewModel>>
     {

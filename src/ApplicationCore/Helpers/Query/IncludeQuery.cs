@@ -1,8 +1,8 @@
-﻿using Microsoft.eShopWeb.ApplicationCore.Interfaces;
+﻿using Effektiv.ApplicationCore.Interfaces;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace Microsoft.eShopWeb.ApplicationCore.Helpers.Query
+namespace Effektiv.ApplicationCore.Helpers.Query
 {
     public class IncludeQuery<TEntity, TPreviousProperty> : IIncludeQuery<TEntity, TPreviousProperty>
     {

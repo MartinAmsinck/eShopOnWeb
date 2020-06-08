@@ -6,9 +6,9 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using Microsoft.eShopWeb.Infrastructure.Identity;
+using Effektiv.Infrastructure.Identity;
 
-namespace Microsoft.eShopWeb.Web.Areas.Identity.Pages.Account
+namespace Effektiv.Web.Areas.Identity.Pages.Account
 {
     [AllowAnonymous]
     public class ConfirmEmailModel : PageModel

@@ -1,9 +1,9 @@
-﻿using Microsoft.eShopWeb.ApplicationCore.Services;
+﻿using Effektiv.ApplicationCore.Services;
 using System;
 using System.Threading.Tasks;
 using Xunit;
 
-namespace Microsoft.eShopWeb.UnitTests.ApplicationCore.Services.BasketServiceTests
+namespace Effektiv.UnitTests.ApplicationCore.Services.BasketServiceTests
 {
     public class TransferBasket
     {

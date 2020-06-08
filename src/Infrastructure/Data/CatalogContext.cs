@@ -1,10 +1,10 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using Microsoft.eShopWeb.ApplicationCore.Entities;
-using Microsoft.eShopWeb.ApplicationCore.Entities.BasketAggregate;
-using Microsoft.eShopWeb.ApplicationCore.Entities.OrderAggregate;
+using Effektiv.ApplicationCore.Entities;
+using Effektiv.ApplicationCore.Entities.BasketAggregate;
+using Effektiv.ApplicationCore.Entities.OrderAggregate;
 using System.Reflection;
 
-namespace Microsoft.eShopWeb.Infrastructure.Data
+namespace Effektiv.Infrastructure.Data
 {
 
     public class CatalogContext : DbContext

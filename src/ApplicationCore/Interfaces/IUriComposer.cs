@@ -1,4 +1,4 @@
-﻿namespace Microsoft.eShopWeb.ApplicationCore.Interfaces
+﻿namespace Effektiv.ApplicationCore.Interfaces
 {
     public interface IUriComposer
     {

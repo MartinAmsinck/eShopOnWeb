@@ -1,8 +1,8 @@
-﻿using Microsoft.eShopWeb.Web;
-using Microsoft.eShopWeb.Web.Extensions;
+﻿using Effektiv.Web;
+using Effektiv.Web.Extensions;
 using Xunit;
 
-namespace Microsoft.eShopWeb.UnitTests.Web.Extensions.CacheHelpersTests
+namespace Effektiv.UnitTests.Web.Extensions.CacheHelpersTests
 {
     public class GenerateCatalogItemCacheKey_Should
     {

@@ -1,11 +1,11 @@
 ﻿using MediatR;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.eShopWeb.Web.Features.MyOrders;
-using Microsoft.eShopWeb.Web.Features.OrderDetails;
+using Effektiv.Web.Features.MyOrders;
+using Effektiv.Web.Features.OrderDetails;
 using System.Threading.Tasks;
 
-namespace Microsoft.eShopWeb.Web.Controllers
+namespace Effektiv.Web.Controllers
 {
     [ApiExplorerSettings(IgnoreApi = true)]
     [Authorize] // Controllers that mainly require Authorization still use Controller/View; other pages use Pages

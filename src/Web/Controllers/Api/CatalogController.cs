@@ -1,8 +1,8 @@
-﻿using Microsoft.eShopWeb.Web.Services;
+﻿using Effektiv.Web.Services;
 using Microsoft.AspNetCore.Mvc;
 using System.Threading.Tasks;
 
-namespace Microsoft.eShopWeb.Web.Controllers.Api
+namespace Effektiv.Web.Controllers.Api
 {
     public class CatalogController : BaseApiController
     {

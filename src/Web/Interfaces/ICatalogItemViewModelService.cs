@@ -1,7 +1,7 @@
-﻿using Microsoft.eShopWeb.Web.ViewModels;
+﻿using Effektiv.Web.ViewModels;
 using System.Threading.Tasks;
 
-namespace Microsoft.eShopWeb.Web.Interfaces
+namespace Effektiv.Web.Interfaces
 {
     public interface ICatalogItemViewModelService
     {
