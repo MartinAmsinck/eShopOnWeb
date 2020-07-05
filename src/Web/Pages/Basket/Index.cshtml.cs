@@ -8,6 +8,7 @@ using Effektiv.Web.Interfaces;
 using Effektiv.Web.ViewModels;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 
 namespace Effektiv.Web.Pages.Basket
@@ -50,10 +51,17 @@ namespace Effektiv.Web.Pages.Basket
             return RedirectToPage();
         }
 
-        public async Task OnPostUpdate(Dictionary<string, int> items)
+        public async Task OnPostUpdate(IEnumerable<BasketItemViewModel> items)
         {
             await SetBasketModelAsync();
-            await _basketService.SetQuantities(BasketModel.Id, items);
+
+            if (!ModelState.IsValid)
+            {
+                return;
+            }
+
+            var updateModel = items.ToDictionary(b => b.Id.ToString(), b => b.Quantity);
+            await _basketService.SetQuantities(BasketModel.Id, updateModel);
 
             await SetBasketModelAsync();
         }

@@ -2,6 +2,7 @@
 using Effektiv.ApplicationCore.Interfaces;
 using Microsoft.EntityFrameworkCore;
 using System.Threading.Tasks;
+using Ardalis.Specification;
 
 namespace Effektiv.Infrastructure.Data
 {

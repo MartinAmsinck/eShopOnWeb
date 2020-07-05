@@ -1,8 +1,9 @@
-﻿using Effektiv.ApplicationCore.Entities;
+﻿using Ardalis.Specification;
+using Microsoft.eShopWeb.ApplicationCore.Entities;
 using System;
 using System.Linq;
 
-namespace Effektiv.ApplicationCore.Specifications
+namespace Microsoft.eShopWeb.ApplicationCore.Specifications
 {
     public class CatalogItemsSpecification : BaseSpecification<CatalogItem>
     {

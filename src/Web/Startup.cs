@@ -1,5 +1,4 @@
 ﻿using Ardalis.ListStartupServices;
-using MediatR;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Diagnostics.HealthChecks;
 using Microsoft.AspNetCore.Hosting;
@@ -7,25 +6,23 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc.ApplicationModels;
 using Microsoft.EntityFrameworkCore;
-using Effektiv.ApplicationCore.Interfaces;
-using Effektiv.ApplicationCore.Services;
-using Effektiv.Infrastructure.Data;
-using Effektiv.Infrastructure.Identity;
-using Effektiv.Infrastructure.Logging;
-using Effektiv.Infrastructure.Services;
-using Effektiv.Web.Interfaces;
-using Effektiv.Web.Services;
+using Microsoft.eShopWeb.Infrastructure.Data;
+using Microsoft.eShopWeb.Infrastructure.Identity;
+using Microsoft.eShopWeb.Infrastructure.Logging;
+using Microsoft.eShopWeb.Infrastructure.Services;
+using Microsoft.eShopWeb.Web.Interfaces;
+using Microsoft.eShopWeb.Web.Services;
+using Microsoft.eShopWeb.Web.Configuration;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Diagnostics.HealthChecks;
 using Microsoft.Extensions.Hosting;
-using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net.Mime;
 
-namespace Effektiv.Web
+namespace Microsoft.eShopWeb.Web
 {
     public class Startup
     {
@@ -83,38 +80,24 @@ namespace Effektiv.Web
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            ConfigureCookieSettings(services);
+            ConfigureCookieSettings.Configure(services);
 
             services.AddIdentity<ApplicationUser, IdentityRole>()
                        .AddDefaultUI()
                        .AddEntityFrameworkStores<AppIdentityDbContext>()
                                        .AddDefaultTokenProviders();
 
-            services.AddMediatR(typeof(BasketViewModelService).Assembly);
-
-            services.AddScoped(typeof(IAsyncRepository<>), typeof(EfRepository<>));
-            services.AddScoped<ICatalogViewModelService, CachedCatalogViewModelService>();
-            services.AddScoped<IBasketService, BasketService>();
-            services.AddScoped<IBasketViewModelService, BasketViewModelService>();
-            services.AddScoped<IOrderService, OrderService>();
-            services.AddScoped<IOrderRepository, OrderRepository>();
-            services.AddScoped<CatalogViewModelService>();
-            services.AddScoped<ICatalogItemViewModelService, CatalogItemViewModelService>();
-            services.Configure<CatalogSettings>(Configuration);
-            services.AddSingleton<IUriComposer>(new UriComposer(Configuration.Get<CatalogSettings>()));
-            services.AddScoped(typeof(IAppLogger<>), typeof(LoggerAdapter<>));
-            services.AddTransient<IEmailSender, EmailSender>();
+            ConfigureCoreServices.Configure(services, Configuration);
+            ConfigureWebServices.Configure(services, Configuration);
 
             // Add memory cache services
             services.AddMemoryCache();
-
             services.AddRouting(options =>
             {
                 // Replace the type and the name used to refer to it with your own
                 // IOutboundParameterTransformer implementation
                 options.ConstraintMap["slugify"] = typeof(SlugifyParameterTransformer);
             });
-
             services.AddMvc(options =>
             {
                 options.Conventions.Add(new RouteTokenTransformerConvention(
@@ -126,13 +109,8 @@ namespace Effektiv.Web
                 options.Conventions.AuthorizePage("/Basket/Checkout");
             });
             services.AddControllersWithViews();
-
             services.AddHttpContextAccessor();
-
-            services.AddSwaggerGen(c => c.SwaggerDoc("v1", new Microsoft.OpenApi.Models.OpenApiInfo { Title = "My API", Version = "v1" }));
-
             services.AddHealthChecks();
-
             services.Configure<ServiceConfig>(config =>
             {
                 config.Services = new List<ServiceDescriptor>(services);
@@ -143,26 +121,6 @@ namespace Effektiv.Web
             _services = services; // used to debug registered services
         }
 
-        private static void ConfigureCookieSettings(IServiceCollection services)
-        {
-            services.Configure<CookiePolicyOptions>(options =>
-            {
-                // This lambda determines whether user consent for non-essential cookies is needed for a given request.
-                options.CheckConsentNeeded = context => true;
-                options.MinimumSameSitePolicy = SameSiteMode.None;
-            });
-            services.ConfigureApplicationCookie(options =>
-            {
-                options.Cookie.HttpOnly = true;
-                options.ExpireTimeSpan = TimeSpan.FromHours(1);
-                options.LoginPath = "/Account/Login";
-                options.LogoutPath = "/Account/Logout";
-                options.Cookie = new CookieBuilder
-                {
-                    IsEssential = true // required for auth to work without explicit user consent; adjust to suit your privacy policy
-                };
-            });
-        }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
@@ -172,16 +130,15 @@ namespace Effektiv.Web
                 {
                     ResponseWriter = async (context, report) =>
                     {
-                        var result = JsonConvert.SerializeObject(
-                            new
+                        var result = new
+                        {
+                            status = report.Status.ToString(),
+                            errors = report.Entries.Select(e => new
                             {
-                                status = report.Status.ToString(),
-                                errors = report.Entries.Select(e => new
-                                {
-                                    key = e.Key,
-                                    value = Enum.GetName(typeof(HealthStatus), e.Value.Status)
-                                })
-                            });
+                                key = e.Key,
+                                value = Enum.GetName(typeof(HealthStatus), e.Value.Status)
+                            })
+                        }.ToJson();
                         context.Response.ContentType = MediaTypeNames.Application.Json;
                         await context.Response.WriteAsync(result);
                     }
@@ -206,15 +163,6 @@ namespace Effektiv.Web
             app.UseCookiePolicy();
             app.UseAuthentication();
             app.UseAuthorization();
-            // Enable middleware to serve generated Swagger as a JSON endpoint.
-            app.UseSwagger();
-
-            // Enable middleware to serve swagger-ui (HTML, JS, CSS, etc.), 
-            // specifying the Swagger JSON endpoint.
-            app.UseSwaggerUI(c =>
-            {
-                c.SwaggerEndpoint("/swagger/v1/swagger.json", "My API V1");
-            });
 
             app.UseEndpoints(endpoints =>
             {

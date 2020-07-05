@@ -1,12 +1,11 @@
-﻿using Effektiv.ApplicationCore.Interfaces;
+﻿using Microsoft.eShopWeb.ApplicationCore.Interfaces;
 using System.Threading.Tasks;
 using System.Collections.Generic;
-using Effektiv.ApplicationCore.Specifications;
-using System.Linq;
+using Microsoft.eShopWeb.ApplicationCore.Specifications;
 using Ardalis.GuardClauses;
-using Effektiv.ApplicationCore.Entities.BasketAggregate;
+using Microsoft.eShopWeb.ApplicationCore.Entities.BasketAggregate;
 
-namespace Effektiv.ApplicationCore.Services
+namespace Microsoft.eShopWeb.ApplicationCore.Services
 {
     public class BasketService : IBasketService
     {
@@ -22,7 +21,9 @@ namespace Effektiv.ApplicationCore.Services
 
         public async Task AddItemToBasket(int basketId, int catalogItemId, decimal price, int quantity = 1)
         {
-            var basket = await _basketRepository.GetByIdAsync(basketId);
+            var basketSpec = new BasketWithItemsSpecification(basketId);
+            var basket = await _basketRepository.FirstOrDefaultAsync(basketSpec);
+            Guard.Against.NullBasket(basketId, basket);
 
             basket.AddItem(catalogItemId, price, quantity);
 
@@ -35,32 +36,19 @@ namespace Effektiv.ApplicationCore.Services
             await _basketRepository.DeleteAsync(basket);
         }
 
-        public async Task<int> GetBasketItemCountAsync(string userName)
-        {
-            Guard.Against.NullOrEmpty(userName, nameof(userName));
-            var basketSpec = new BasketWithItemsSpecification(userName);
-            var basket = (await _basketRepository.FirstOrDefaultAsync(basketSpec));
-            if (basket == null)
-            {
-                _logger.LogInformation($"No basket found for {userName}");
-                return 0;
-            }
-            int count = basket.Items.Sum(i => i.Quantity);
-            _logger.LogInformation($"Basket for {userName} has {count} items.");
-            return count;
-        }
-
         public async Task SetQuantities(int basketId, Dictionary<string, int> quantities)
         {
             Guard.Against.Null(quantities, nameof(quantities));
-            var basket = await _basketRepository.GetByIdAsync(basketId);
+            var basketSpec = new BasketWithItemsSpecification(basketId);
+            var basket = await _basketRepository.FirstOrDefaultAsync(basketSpec);
             Guard.Against.NullBasket(basketId, basket);
+
             foreach (var item in basket.Items)
             {
                 if (quantities.TryGetValue(item.Id.ToString(), out var quantity))
                 {
                     if (_logger != null) _logger.LogInformation($"Updating quantity of item ID:{item.Id} to {quantity}.");
-                    item.SetNewQuantity(quantity);
+                    item.SetQuantity(quantity);
                 }
             }
             basket.RemoveEmptyItems();
@@ -71,11 +59,22 @@ namespace Effektiv.ApplicationCore.Services
         {
             Guard.Against.NullOrEmpty(anonymousId, nameof(anonymousId));
             Guard.Against.NullOrEmpty(userName, nameof(userName));
-            var basketSpec = new BasketWithItemsSpecification(anonymousId);
-            var basket = (await _basketRepository.FirstOrDefaultAsync(basketSpec));
-            if (basket == null) return;
-            basket.SetNewBuyerId(userName);
-            await _basketRepository.UpdateAsync(basket);
+            var anonymousBasketSpec = new BasketWithItemsSpecification(anonymousId);
+            var anonymousBasket = await _basketRepository.FirstOrDefaultAsync(anonymousBasketSpec);
+            if (anonymousBasket == null) return;
+            var userBasketSpec = new BasketWithItemsSpecification(userName);
+            var userBasket = await _basketRepository.FirstOrDefaultAsync(userBasketSpec);
+            if (userBasket == null)
+            {
+                userBasket = new Basket(userName);
+                await _basketRepository.AddAsync(userBasket);
+            }
+            foreach (var item in anonymousBasket.Items)
+            {
+                userBasket.AddItem(item.CatalogItemId, item.UnitPrice, item.Quantity);
+            }
+            await _basketRepository.UpdateAsync(userBasket);
+            await _basketRepository.DeleteAsync(anonymousBasket);
         }
     }
 }

@@ -1,8 +1,9 @@
-﻿using Effektiv.ApplicationCore.Entities;
+﻿using Ardalis.Specification;
+using Microsoft.eShopWeb.ApplicationCore.Entities;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace Effektiv.ApplicationCore.Interfaces
+namespace Microsoft.eShopWeb.ApplicationCore.Interfaces
 {
     public interface IAsyncRepository<T> where T : BaseEntity, IAggregateRoot
     {

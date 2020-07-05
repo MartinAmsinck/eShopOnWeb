@@ -18,7 +18,7 @@ namespace Effektiv.UnitTests.ApplicationCore.Services.BasketServiceTests
         }
 
         [Fact]
-        public async Task Should_InvokeBasketRepositoryDeleteAsync_Once()
+        public async Task ShouldInvokeBasketRepositoryDeleteAsyncOnce()
         {
             var basket = new Basket(_buyerId);
             basket.AddItem(1, It.IsAny<decimal>(), It.IsAny<int>());

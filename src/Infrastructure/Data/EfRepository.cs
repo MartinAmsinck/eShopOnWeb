@@ -1,11 +1,12 @@
-﻿using Microsoft.EntityFrameworkCore;
-using Effektiv.ApplicationCore.Entities;
-using Effektiv.ApplicationCore.Interfaces;
+﻿using Ardalis.Specification;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.eShopWeb.ApplicationCore.Entities;
+using Microsoft.eShopWeb.ApplicationCore.Interfaces;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Effektiv.Infrastructure.Data
+namespace Microsoft.eShopWeb.Infrastructure.Data
 {
     /// <summary>
     /// "There's some repetition here - couldn't we have some the sync methods call the async?"
@@ -33,12 +34,14 @@ namespace Effektiv.Infrastructure.Data
 
         public async Task<IReadOnlyList<T>> ListAsync(ISpecification<T> spec)
         {
-            return await ApplySpecification(spec).ToListAsync();
+            var specificationResult = await ApplySpecification(spec);
+            return await specificationResult.ToListAsync();
         }
 
         public async Task<int> CountAsync(ISpecification<T> spec)
         {
-            return await ApplySpecification(spec).CountAsync();
+            var specificationResult = await ApplySpecification(spec);
+            return await specificationResult.CountAsync();
         }
 
         public async Task<T> AddAsync(T entity)
@@ -63,17 +66,19 @@ namespace Effektiv.Infrastructure.Data
 
         public async Task<T> FirstAsync(ISpecification<T> spec)
         {
-            return await ApplySpecification(spec).FirstAsync();
+            var specificationResult = await ApplySpecification(spec);
+            return await specificationResult.FirstAsync();
         }
 
         public async Task<T> FirstOrDefaultAsync(ISpecification<T> spec)
         {
-            return await ApplySpecification(spec).FirstOrDefaultAsync();
+            var specificationResult = await ApplySpecification(spec);
+            return await specificationResult.FirstOrDefaultAsync();
         }
 
-        private IQueryable<T> ApplySpecification(ISpecification<T> spec)
+        private async Task<IQueryable<T>> ApplySpecification(ISpecification<T> spec)
         {
-            return SpecificationEvaluator<T>.GetQuery(_dbContext.Set<T>().AsQueryable(), spec);
+            return await EfSpecificationEvaluator<T>.GetQuery(_dbContext.Set<T>().AsQueryable(), spec);
         }
     }
 }

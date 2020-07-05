@@ -36,6 +36,5 @@ namespace Effektiv.UnitTests.ApplicationCore.Services.BasketServiceTests
             await Assert.ThrowsAsync<ArgumentNullException>(async () =>
                 await basketService.SetQuantities(123, null));
         }
-
     }
 }

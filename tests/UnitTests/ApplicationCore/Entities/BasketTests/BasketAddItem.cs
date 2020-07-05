@@ -1,8 +1,9 @@
-﻿using Effektiv.ApplicationCore.Entities.BasketAggregate;
+﻿using Microsoft.eShopWeb.ApplicationCore.Entities.BasketAggregate;
+using System;
 using System.Linq;
 using Xunit;
 
-namespace Effektiv.UnitTests.ApplicationCore.Entities.BasketTests
+namespace Microsoft.eShopWeb.UnitTests.ApplicationCore.Entities.BasketTests
 {
     public class BasketAddItem
     {
@@ -56,13 +57,20 @@ namespace Effektiv.UnitTests.ApplicationCore.Entities.BasketTests
         }
 
         [Fact]
-        public void RemoveEmptyItems()
+        public void CantAddItemWithNegativeQuantity()
         {
             var basket = new Basket(_buyerId);
-            basket.AddItem(_testCatalogItemId, _testUnitPrice, 0);
-            basket.RemoveEmptyItems();
 
-            Assert.Equal(0, basket.Items.Count);
+            Assert.Throws<ArgumentOutOfRangeException>(() => basket.AddItem(_testCatalogItemId, _testUnitPrice, -1));
+        }
+
+        [Fact]
+        public void CantModifyQuantityToNegativeNumber()
+        {
+            var basket = new Basket(_buyerId);
+            basket.AddItem(_testCatalogItemId, _testUnitPrice);
+
+            Assert.Throws<ArgumentOutOfRangeException>(() => basket.AddItem(_testCatalogItemId, _testUnitPrice, -2));
         }
     }
 }

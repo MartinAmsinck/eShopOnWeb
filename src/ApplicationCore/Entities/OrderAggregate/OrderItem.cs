@@ -1,6 +1,5 @@
 ﻿namespace Effektiv.ApplicationCore.Entities.OrderAggregate
 {
-
     public class OrderItem : BaseEntity
     {
         public CatalogItemOrdered ItemOrdered { get; private set; }
