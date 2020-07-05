@@ -1,15 +1,15 @@
 ﻿using Ardalis.ApiEndpoints;
 using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.eShopWeb.ApplicationCore.Entities;
-using Microsoft.eShopWeb.ApplicationCore.Interfaces;
-using Microsoft.eShopWeb.ApplicationCore.Specifications;
+using Effektiv.ApplicationCore.Entities;
+using Effektiv.ApplicationCore.Interfaces;
+using Effektiv.ApplicationCore.Specifications;
 using Swashbuckle.AspNetCore.Annotations;
 using System;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Microsoft.eShopWeb.PublicApi.CatalogItemEndpoints
+namespace Effektiv.PublicApi.CatalogItemEndpoints
 {
     public class ListPaged : BaseAsyncEndpoint<ListPagedCatalogItemRequest, ListPagedCatalogItemResponse>
     {

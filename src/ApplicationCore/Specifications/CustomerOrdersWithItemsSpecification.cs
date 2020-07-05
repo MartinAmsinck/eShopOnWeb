@@ -1,8 +1,8 @@
 ﻿using Ardalis.Specification;
 using Ardalis.Specification.QueryExtensions.Include;
-using Microsoft.eShopWeb.ApplicationCore.Entities.OrderAggregate;
+using Effektiv.ApplicationCore.Entities.OrderAggregate;
 
-namespace Microsoft.eShopWeb.ApplicationCore.Specifications
+namespace Effektiv.ApplicationCore.Specifications
 {
     public class CustomerOrdersWithItemsSpecification : BaseSpecification<Order>
     {

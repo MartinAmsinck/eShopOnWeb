@@ -1,10 +1,10 @@
 ﻿using Ardalis.ApiEndpoints;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.eShopWeb.ApplicationCore.Constants;
-using Microsoft.eShopWeb.ApplicationCore.Entities;
-using Microsoft.eShopWeb.ApplicationCore.Interfaces;
-using Microsoft.eShopWeb.Infrastructure.Identity;
+using Effektiv.ApplicationCore.Constants;
+using Effektiv.ApplicationCore.Entities;
+using Effektiv.ApplicationCore.Interfaces;
+using Effektiv.Infrastructure.Identity;
 using Microsoft.IdentityModel.Tokens;
 using Swashbuckle.AspNetCore.Annotations;
 using System;
@@ -13,7 +13,7 @@ using System.Security.Claims;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Microsoft.eShopWeb.PublicApi.AuthEndpoints
+namespace Effektiv.PublicApi.AuthEndpoints
 {
     public class Authenticate : BaseAsyncEndpoint<AuthenticateRequest, AuthenticateResponse>
     {

@@ -1,12 +1,12 @@
-﻿using Microsoft.eShopWeb.ApplicationCore.Interfaces;
-using Microsoft.eShopWeb.ApplicationCore.Services;
-using Microsoft.eShopWeb.Infrastructure.Data;
-using Microsoft.eShopWeb.Infrastructure.Logging;
-using Microsoft.eShopWeb.Infrastructure.Services;
+﻿using Effektiv.ApplicationCore.Interfaces;
+using Effektiv.ApplicationCore.Services;
+using Effektiv.Infrastructure.Data;
+using Effektiv.Infrastructure.Logging;
+using Effektiv.Infrastructure.Services;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace Microsoft.eShopWeb.Web.Configuration
+namespace Effektiv.Web.Configuration
 {
     public static class ConfigureCoreServices
     {

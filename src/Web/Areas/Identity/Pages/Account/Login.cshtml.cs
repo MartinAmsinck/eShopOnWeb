@@ -10,7 +10,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Effektiv.Infrastructure.Identity;
 using Microsoft.Extensions.Logging;
-using Microsoft.eShopWeb.ApplicationCore.Interfaces;
+using Effektiv.ApplicationCore.Interfaces;
 
 namespace Effektiv.Web.Areas.Identity.Pages.Account
 {

@@ -1,9 +1,9 @@
-﻿using Microsoft.eShopWeb.ApplicationCore.Entities.OrderAggregate;
+﻿using Effektiv.ApplicationCore.Entities.OrderAggregate;
 using System.Collections.Generic;
 using System.Linq;
 using Xunit;
 
-namespace Microsoft.eShopWeb.UnitTests.ApplicationCore.Specifications
+namespace Effektiv.UnitTests.ApplicationCore.Specifications
 {
     public class CustomerOrdersWithItemsSpecification
     {
@@ -13,7 +13,7 @@ namespace Microsoft.eShopWeb.UnitTests.ApplicationCore.Specifications
         [Fact]
         public void ReturnsOrderWithOrderedItem()
         {
-            var spec = new eShopWeb.ApplicationCore.Specifications.CustomerOrdersWithItemsSpecification(_buyerId);
+            var spec = new Effektiv.ApplicationCore.Specifications.CustomerOrdersWithItemsSpecification(_buyerId);
 
             var result = GetTestCollection()
                 .AsQueryable()
@@ -28,7 +28,7 @@ namespace Microsoft.eShopWeb.UnitTests.ApplicationCore.Specifications
         [Fact]
         public void ReturnsAllOrderWithAllOrderedItem()
         {
-            var spec = new eShopWeb.ApplicationCore.Specifications.CustomerOrdersWithItemsSpecification(_buyerId);
+            var spec = new Effektiv.ApplicationCore.Specifications.CustomerOrdersWithItemsSpecification(_buyerId);
 
             var result = GetTestCollection()
                 .AsQueryable()

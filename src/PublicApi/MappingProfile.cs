@@ -1,8 +1,8 @@
 ﻿using AutoMapper;
-using Microsoft.eShopWeb.ApplicationCore.Entities;
-using Microsoft.eShopWeb.PublicApi.CatalogItemEndpoints;
+using Effektiv.ApplicationCore.Entities;
+using Effektiv.PublicApi.CatalogItemEndpoints;
 
-namespace Microsoft.eShopWeb.PublicApi
+namespace Effektiv.PublicApi
 {
     public class MappingProfile : Profile
     {

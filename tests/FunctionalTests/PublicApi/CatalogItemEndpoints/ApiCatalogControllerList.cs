@@ -1,11 +1,11 @@
-﻿using Microsoft.eShopWeb.FunctionalTests.PublicApi;
-using Microsoft.eShopWeb.Web.ViewModels;
+﻿using Effektiv.FunctionalTests.PublicApi;
+using Effektiv.Web.ViewModels;
 using System.Linq;
 using System.Net.Http;
 using System.Threading.Tasks;
 using Xunit;
 
-namespace Microsoft.eShopWeb.FunctionalTests.Web.Controllers
+namespace Effektiv.FunctionalTests.Web.Controllers
 {
     [Collection("Sequential")]
     public class ApiCatalogControllerList : IClassFixture<ApiTestFixture>

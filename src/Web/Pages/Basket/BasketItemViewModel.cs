@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace Microsoft.eShopWeb.Web.Pages.Basket
+namespace Effektiv.Web.Pages.Basket
 {
     public class BasketItemViewModel
     {

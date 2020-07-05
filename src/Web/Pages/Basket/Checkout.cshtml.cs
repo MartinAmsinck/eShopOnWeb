@@ -4,17 +4,17 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using Microsoft.eShopWeb.ApplicationCore.Entities.OrderAggregate;
-using Microsoft.eShopWeb.ApplicationCore.Exceptions;
-using Microsoft.eShopWeb.ApplicationCore.Interfaces;
-using Microsoft.eShopWeb.Infrastructure.Identity;
-using Microsoft.eShopWeb.Web.Interfaces;
+using Effektiv.ApplicationCore.Entities.OrderAggregate;
+using Effektiv.ApplicationCore.Exceptions;
+using Effektiv.ApplicationCore.Interfaces;
+using Effektiv.Infrastructure.Identity;
+using Effektiv.Web.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Microsoft.eShopWeb.Web.Pages.Basket
+namespace Effektiv.Web.Pages.Basket
 {
     [Authorize]
     public class CheckoutModel : PageModel

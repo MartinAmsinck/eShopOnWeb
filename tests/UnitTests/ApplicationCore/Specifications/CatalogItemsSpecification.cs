@@ -1,10 +1,10 @@
-﻿using Microsoft.eShopWeb.ApplicationCore.Entities;
+﻿using Effektiv.ApplicationCore.Entities;
 using Moq;
 using System.Collections.Generic;
 using System.Linq;
 using Xunit;
 
-namespace Microsoft.eShopWeb.UnitTests.ApplicationCore.Specifications
+namespace Effektiv.UnitTests.ApplicationCore.Specifications
 {
     public class CatalogItemsSpecification
     {
@@ -12,7 +12,7 @@ namespace Microsoft.eShopWeb.UnitTests.ApplicationCore.Specifications
         public void MatchesSpecificCatalogItem()
         {
             var catalogItemIds = new int[] { 1 };
-            var spec = new eShopWeb.ApplicationCore.Specifications.CatalogItemsSpecification(catalogItemIds);
+            var spec = new Effektiv.ApplicationCore.Specifications.CatalogItemsSpecification(catalogItemIds);
 
             var result = GetTestCollection()
                 .AsQueryable()
@@ -26,7 +26,7 @@ namespace Microsoft.eShopWeb.UnitTests.ApplicationCore.Specifications
         public void MatchesAllCatalogItems()
         {
             var catalogItemIds = new int[] { 1, 3 };
-            var spec = new eShopWeb.ApplicationCore.Specifications.CatalogItemsSpecification(catalogItemIds);
+            var spec = new Effektiv.ApplicationCore.Specifications.CatalogItemsSpecification(catalogItemIds);
 
             var result = GetTestCollection()
                 .AsQueryable()

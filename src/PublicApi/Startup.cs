@@ -7,19 +7,19 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.eShopWeb.ApplicationCore.Constants;
-using Microsoft.eShopWeb.ApplicationCore.Interfaces;
-using Microsoft.eShopWeb.ApplicationCore.Services;
-using Microsoft.eShopWeb.Infrastructure.Data;
-using Microsoft.eShopWeb.Infrastructure.Identity;
-using Microsoft.eShopWeb.Infrastructure.Logging;
+using Effektiv.ApplicationCore.Constants;
+using Effektiv.ApplicationCore.Interfaces;
+using Effektiv.ApplicationCore.Services;
+using Effektiv.Infrastructure.Data;
+using Effektiv.Infrastructure.Identity;
+using Effektiv.Infrastructure.Logging;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 
-namespace Microsoft.eShopWeb.PublicApi
+namespace Effektiv.PublicApi
 {
     public class Startup
     {

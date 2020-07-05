@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Microsoft.eShopWeb.PublicApi.AuthEndpoints
+namespace Effektiv.PublicApi.AuthEndpoints
 {
     public class AuthenticateResponse : BaseResponse
     {

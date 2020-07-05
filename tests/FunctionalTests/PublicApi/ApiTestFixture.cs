@@ -2,14 +2,14 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc.Testing;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.eShopWeb.Infrastructure.Data;
-using Microsoft.eShopWeb.Infrastructure.Identity;
-using Microsoft.eShopWeb.PublicApi;
+using Effektiv.Infrastructure.Data;
+using Effektiv.Infrastructure.Identity;
+using Effektiv.PublicApi;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using System;
 
-namespace Microsoft.eShopWeb.FunctionalTests.PublicApi
+namespace Effektiv.FunctionalTests.PublicApi
 {
     public class ApiTestFixture : WebApplicationFactory<Startup>
     {

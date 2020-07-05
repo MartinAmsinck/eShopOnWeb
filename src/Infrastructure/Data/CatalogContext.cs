@@ -3,6 +3,7 @@ using Effektiv.ApplicationCore.Entities;
 using Effektiv.ApplicationCore.Entities.BasketAggregate;
 using Effektiv.ApplicationCore.Entities.OrderAggregate;
 using System.Reflection;
+using Effektiv.ApplicationCore.Entities.BasketAggregate;
 
 namespace Effektiv.Infrastructure.Data
 {

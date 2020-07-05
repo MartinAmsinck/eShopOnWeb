@@ -1,6 +1,6 @@
-﻿using Microsoft.eShopWeb.FunctionalTests.PublicApi;
-using Microsoft.eShopWeb.FunctionalTests.Web.Api;
-using Microsoft.eShopWeb.PublicApi.CatalogItemEndpoints;
+﻿using Effektiv.FunctionalTests.PublicApi;
+using Effektiv.FunctionalTests.Web.Api;
+using Effektiv.PublicApi.CatalogItemEndpoints;
 using System.Net;
 using System.Net.Http;
 using System.Net.Http.Headers;
@@ -8,7 +8,7 @@ using System.Text.Json;
 using System.Threading.Tasks;
 using Xunit;
 
-namespace Microsoft.eShopWeb.FunctionalTests.Web.Controllers
+namespace Effektiv.FunctionalTests.Web.Controllers
 {
     [Collection("Sequential")]
     public class DeleteEndpoint : IClassFixture<ApiTestFixture>

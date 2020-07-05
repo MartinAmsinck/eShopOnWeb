@@ -6,13 +6,13 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc.ApplicationModels;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.eShopWeb.Infrastructure.Data;
-using Microsoft.eShopWeb.Infrastructure.Identity;
-using Microsoft.eShopWeb.Infrastructure.Logging;
-using Microsoft.eShopWeb.Infrastructure.Services;
-using Microsoft.eShopWeb.Web.Interfaces;
-using Microsoft.eShopWeb.Web.Services;
-using Microsoft.eShopWeb.Web.Configuration;
+using Effektiv.Infrastructure.Data;
+using Effektiv.Infrastructure.Identity;
+using Effektiv.Infrastructure.Logging;
+using Effektiv.Infrastructure.Services;
+using Effektiv.Web.Interfaces;
+using Effektiv.Web.Services;
+using Effektiv.Web.Configuration;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Diagnostics.HealthChecks;
@@ -22,7 +22,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Net.Mime;
 
-namespace Microsoft.eShopWeb.Web
+namespace Effektiv.Web
 {
     public class Startup
     {

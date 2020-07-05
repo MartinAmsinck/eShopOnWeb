@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Microsoft.eShopWeb.PublicApi.CatalogItemEndpoints
+namespace Effektiv.PublicApi.CatalogItemEndpoints
 {
     public class DeleteCatalogItemResponse : BaseResponse
     {

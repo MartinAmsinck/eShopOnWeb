@@ -1,7 +1,7 @@
-﻿using Microsoft.eShopWeb.ApplicationCore.Entities.BasketAggregate;
+﻿using Effektiv.ApplicationCore.Entities.BasketAggregate;
 using Xunit;
 
-namespace Microsoft.eShopWeb.UnitTests.ApplicationCore.Entities.BasketTests
+namespace Effektiv.UnitTests.ApplicationCore.Entities.BasketTests
 {
     public class BasketRemoveEmptyItems
     {
